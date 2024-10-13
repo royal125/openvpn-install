@@ -6,17 +6,21 @@ As always, first make sure that your system has up-to-date packages.
 
 apt update
 apt upgrade
+
 Next, install required dependencies.
 
 apt install ca-certificates wget net-tools gnupg
+
 Add the OpenVPN server to your repository list.
 
 wget -qO - https://as-repository.openvpn.net/as-repo-public.gpg | apt-key add -
 echo "deb http://as-repository.openvpn.net/as/debian focal main">/etc/apt/sources.list.d/openvpn-as-repo.list
 apt update
+
 Finally, install the OpenVPN access server.
 
 apt install openvpn-as
+
 Access the Admin Dashboard
 You can access the OpenVPN administrator dashboard at https://<your-ip>:943/admin or https://<your-domain>:943/admin. In either case, the default username is openvpn.
 
